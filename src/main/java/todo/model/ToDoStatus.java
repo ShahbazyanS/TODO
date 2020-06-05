@@ -1,5 +1,5 @@
 package todo.model;
 
-public enum Status {
+public enum ToDoStatus {
     TODO, IN_PROGRESS, FINISHED
 }

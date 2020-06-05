@@ -1,31 +1,34 @@
 package todo;
 
 public interface Commands {
+
     int EXIT = 0;
     int LOGIN = 1;
     int REGISTER = 2;
 
     int LOGOUT = 0;
-    int ADD_TODO = 1;
-    int MY_LIST = 2;
-    int MY_IN_PROGRESS_LIST = 3;
-    int MY_FINISHED_LIST = 4;
-    int CHANGE_TODO_STATUS = 5;
-    int DELETE_TODO_BY_ID = 6;
+    int ADD_NEW_TODO = 1;
+    int MY_ALL_LIST = 2;
+    int MY_TODO_LIST = 3;
+    int MY_IN_PROGRESS_LIST = 4;
+    int MY_FINISHED_LIST = 5;
+    int CHANGE_TODO_STATUS = 6;
+    int DELETE_TODO = 7;
 
-    static void commands(){
-        System.out.println("please input " + EXIT + " for exit");
-        System.out.println("please input " + LOGIN + " for login");
-        System.out.println("please input " + REGISTER + " for register");
+    static void printMainCommands() {
+        System.out.println("Please input " + EXIT + " from exit");
+        System.out.println("Please input " + LOGIN + " from login");
+        System.out.println("Please input " + REGISTER + " from register");
     }
 
-    static void userCommand(){
-        System.out.println("please input " + LOGOUT + " for logout");
-        System.out.println("please input " + ADD_TODO + " for add todo");
-        System.out.println("please input " + MY_LIST + " for print my all todos");
-        System.out.println("please input " + MY_IN_PROGRESS_LIST + " for print my in progress todos");
-        System.out.println("please input " + MY_FINISHED_LIST + " for print my finished todos");
-        System.out.println("please input " + CHANGE_TODO_STATUS + " for change todo status");
-        System.out.println("please input " + DELETE_TODO_BY_ID + " for delete todo by id");
+    static void printUserCommands() {
+        System.out.println("Please input " + LOGOUT + " from logout");
+        System.out.println("Please input " + ADD_NEW_TODO + " from add new todo");
+        System.out.println("Please input " + MY_ALL_LIST + " from print all todo");
+        System.out.println("Please input " + MY_TODO_LIST + " from print my todo list");
+        System.out.println("Please input " + MY_IN_PROGRESS_LIST + " from print my in progress todo");
+        System.out.println("Please input " + MY_FINISHED_LIST + " from print my finished todo");
+        System.out.println("Please input " + CHANGE_TODO_STATUS + " from change todo status");
+        System.out.println("Please input " + DELETE_TODO + "from delete todo");
     }
 }

@@ -1,25 +1,24 @@
 package todo.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.sql.Date;
+
+import java.util.Date;
+
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Todo {
-    private int id;
-    private String name;
-    private Date creatdate;
-    private String deadline;
-    private Status status;
+    private long id;
+    private String title;
+    private Date deadline;
+    private ToDoStatus status;
     private User user;
+    private Date creatdate;
 
-    public Todo(String name, Date date, String deadline, Status status, User user) {
-        this.name = name;
-        this.creatdate =  date;
-        this.status = status;
-        this.user = user;
-    }
+
 }
